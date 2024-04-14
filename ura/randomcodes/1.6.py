@@ -1,24 +1,8 @@
-a = open("C:\\Users\\VR1\\Desktop\\repository\\ura\\randomcodes\\asd.txt")
-count = 0
-for i in a.readlines():
-    b = sorted(list(map(int,i.split())))
+a = 65 * '8'
+while '222' in a or '888' in a:
+    if '222' in a:
+        a = a.replace('222','8',1)
+    else:
+        a = a.replace('888','2',1)
+print(a)
     
-    d = {}
-    for j in b:
-        if j in d:
-            d[j] += 1
-        else:
-            d[j] = 1 
-    k = 0
-    j = b[0]
-    l = b[-1]
-
-    if len(d) <= 3:
-        if (b[0] + b[-1])** 2 > sum(b[1:-1])**2:
-            count += 1
-    
-print(count)
-    
-
-            
-        
