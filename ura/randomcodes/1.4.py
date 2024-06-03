@@ -1,14 +1,11 @@
-alf = 'АВИОРТФ'
-count = 0
-for i1 in alf:
-    for i2 in alf:
-        for i3 in alf:
-            for i4 in alf:
-                for i5 in alf:
-                     for i6 in alf:
-                        c = i1 + i2 + i3 + i4 + i5 + i6
-                        if c[0] != 'О':
-                            if c.count('Р') == 2:
-                                count += 1
-print(count ,' \\\\')
-                            
+
+a = 82 * '8'
+while '1111' in a or '8888' in a:
+    if '1111' in a:
+        a = a.replace('1111','8',1)
+    if '8888' in a:
+        a = a.replace('8888','11',1)
+    
+   
+print(a)
+       

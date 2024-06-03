@@ -1,22 +1,12 @@
-def F(n):
-    c = bin(n)[2:]
-    if c.count('1') % 3 == 0:
-        c = c + c[0] + c[1]
+def f(n):
+    b = bin(n)[2:]
+    if n % 2 == 0:
+        b = '10' + b
     else:
-        c = c + bin((c.count('1') % 3)*3)[2:]
-    return int(c,2)
-
-
-
-for i in range(1,1000):
-    if F(i) <= 60:
+        b = '1' + b + '01'
+    return int(b,2)
+for i in range(1,10000):
+    if f(i) > 516:
         print(i)
-        
-
-
-print(bin(14)[2:])
-print(int('111011',2))
-
-
-
-
+        break
+print(f(63))
